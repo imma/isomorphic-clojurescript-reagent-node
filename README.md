@@ -8,6 +8,9 @@ See
 http://blog.testdouble.com/posts/2016-01-21-isomorphic-clojurescript.html
 for more in-depth information.
 
+Incorporates code from https://github.com/scpike/memtest for the memtest
+game.
+
 ## Installation
 
 `block bootstrap` to build the dependencies.  Then `require` to use the
