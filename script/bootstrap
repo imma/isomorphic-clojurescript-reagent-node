@@ -5,7 +5,7 @@ function bootstrap {
   source "$shome/script/profile"
 
   npm install
-  lein cljsbuild once server app
+  lein cljsbuild once server client
 }
 
 bootstrap

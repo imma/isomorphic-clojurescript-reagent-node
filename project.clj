@@ -1,6 +1,6 @@
 (defproject demo "0.1.0-SNAPSHOT"
-  :description "Demo application to show how to build an isomorphic app with CLJS"
-  :url "http://example.com/FIXME"
+  :description "Demo to show how to build an isomorphic app with CLJS"
+  :url "http://defn.sh/isomorphic-clojurescript-reagent-node"
 
   :min-lein-version "2.6.1"
 
@@ -21,15 +21,15 @@
               :source-paths ["src" "src-server"]
               :compiler {
                 :main demo.server
-                :output-to "resources/public/js/server-side/server.js"
-                :output-dir "resources/public/js/server-side"
+                :output-to "resources/public/js/server/server.js"
+                :output-dir "resources/public/js/server"
                 :target :nodejs
                 :optimizations :none
                 :source-map true}}
-             {:id "app"
+             {:id "client"
               :source-paths ["src" "src-client"]
               :compiler {
-                :output-to "resources/public/js/app.js"
+                :output-to "resources/public/js/client.js"
                 :output-dir "resources/public/js"
                 :optimizations :none
                 :source-map true}}]})

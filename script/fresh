@@ -4,7 +4,7 @@ function fresh {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  if [[ -f resources/public/js/server-side/server.js ]]; then
+  if [[ -f resources/public/js/server/server.js ]]; then
     return 0
   fi
 
