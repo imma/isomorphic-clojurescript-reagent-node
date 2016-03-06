@@ -20,12 +20,12 @@
     :builds [{:id "server"
               :source-paths ["src" "src-server"]
               :compiler {
-                :main demo.server
                 :output-to "resources/public/js/server/server.js"
                 :output-dir "resources/public/js/server"
-                :target :nodejs
                 :optimizations :none
-                :source-map true}}
+                :source-map true
+                :main demo.server
+                :target :nodejs}}
              {:id "client"
               :source-paths ["src" "src-client"]
               :compiler {
