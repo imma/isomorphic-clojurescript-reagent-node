@@ -1,0 +1,6 @@
+{
+  "require": [
+    "node",
+    "leiningen"
+  ]
+}
