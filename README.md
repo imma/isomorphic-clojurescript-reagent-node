@@ -46,6 +46,13 @@ Run `script/server` to start server
 
 ## ClojureScript
 
+### Namespaces
+
+    demo.client
+    demo.server
+    demo.core
+    site.tools
+
 ### Client
 
     src-client/demo/client.cljs
@@ -54,9 +61,12 @@ Run `script/server` to start server
 
     src-server/demo/server.cljs
 
-### Common
+### Core
 
     src/demo/core.cljs
+
+### Site
+
     src/site/tools.cljs
 
 # License
