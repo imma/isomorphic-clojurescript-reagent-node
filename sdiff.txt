@@ -1,5 +1,7 @@
-# demo client/demo server
+# client/server
 ./client.js                                                   | ./server.js
+
+# demo client/demo server
 ./demo/client.cljs                                            | ./demo/server.cljs
 ./demo/client.cljs.cache.edn                                  | ./demo/server.cljs.cache.edn
 ./demo/client.js                                              | ./demo/server.js
