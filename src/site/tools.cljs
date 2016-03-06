@@ -15,7 +15,7 @@
     [:div#app [body]]
     [:script {:type "text/javascript" :src "goog/base.js"}]
     [:script {:type "text/javascript" :src "client.js"}]
-    [:script {:type                    "text/javascript"
+    [:script {:type "text/javascript"
               :dangerouslySetInnerHTML {:__html "goog.require('demo.client');"}}]]])
 
 
