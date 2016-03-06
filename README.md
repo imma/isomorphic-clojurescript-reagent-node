@@ -1,22 +1,52 @@
 # Isomorphic ClojureScript with Reagent and Node.js
 
-This is an example application that demonstrates how to build an isomorphic ClojureScript application using Reagent (react.js) that targets Node.js
+This is an example application that demonstrates how to build an
+isomorphic ClojureScript application using Reagent (react.js) that
+targets Node.js
 
-See http://blog.testdouble.com/posts/2016-01-21-isomorphic-clojurescript.html for more in-depth information.
+See
+http://blog.testdouble.com/posts/2016-01-21-isomorphic-clojurescript.html
+for more in-depth information.
 
 ## Installation
 
-This demo assumes you have Java, Leiningen and Node.js installed.
+`block bootstrap` to build the dependencies.  Then `require` to use the
+blocks.  To rebuild this project, run `script/bootstrap`.
 
 ## Usage
 
-`npm install` to install Node packages.
-
-`lein cljsbuild once server app` to build project
-
-`node resources/public/js/server-side/server.js` to start server
+Run `script/server` to start server
 
 ## License
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
+
+# Inventory
+
+### Repo overhead
+
+    README.md
+    LICENSE
+    .gitignore
+    bin/.gitignore
+
+### Builds
+
+    project.clj
+    package.json
+
+### Blocks
+
+    Blockfile.json
+    script/bootstrap
+    script/fresh
+    script/profile
+    script/server
+
+### ClojureScript
+
+    src-client/demo/client.cljs
+    src-server/demo/server.cljs
+    src/demo/core.cljs
+    src/site/tools.cljs
