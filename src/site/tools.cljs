@@ -18,8 +18,6 @@
     [:script {:type "text/javascript"
               :dangerouslySetInnerHTML {:__html "goog.require('demo.client');"}}]]])
 
-
-
 (defn ^:export render-page [path]
   (reagent/render-to-static-markup (do
                                      (secretary/dispatch! path)
