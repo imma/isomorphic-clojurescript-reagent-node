@@ -2,15 +2,15 @@
   :description "Demo application to show how to build an isomorphic app with CLJS"
   :url "http://example.com/FIXME"
 
-  :min-lein-version "2.5.3"
+  :min-lein-version "2.6.1"
 
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "1.7.170"]
+                 [org.clojure/clojurescript "1.7.228"]
                  [reagent "0.6.0-alpha"]
                  [secretary "1.2.3"]
-                 [kibu/pushy "0.3.1"]]
+                 [kibu/pushy "0.3.6"]]
 
-  :plugins [[lein-cljsbuild "1.1.1"]]
+  :plugins [[lein-cljsbuild "1.1.2"]]
 
   :source-paths ["src"]
 
