@@ -29,7 +29,7 @@
              {:id "client"
               :source-paths ["src" "src-client"]
               :compiler {
-                :output-to "resources/public/js/client.js"
-                :output-dir "resources/public/js"
+                :output-to "resources/public/js/client/client.js"
+                :output-dir "resources/public/js/client"
                 :optimizations :none
                 :source-map true}}]})
