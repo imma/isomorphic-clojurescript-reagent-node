@@ -31,6 +31,11 @@ Run `script/server` to start server
     project.clj
     package.json
 
+### Ignored builds
+
+    node_modules
+    resources
+
 ## Blocks
 
     Blockfile.json
