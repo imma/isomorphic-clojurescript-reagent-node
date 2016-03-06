@@ -1,25 +1,29 @@
+# client/server
 ./client.js                                                   | ./server.js
-./demo/client.cljs                                            < ./demo/server.cljs
-./demo/client.cljs.cache.edn                                  < ./demo/server.cljs.cache.edn
-./demo/client.js                                              < ./demo/server.js
-./demo/client.js.map                                          < ./demo/server.js.map
+./demo/client.cljs                                            | ./demo/server.cljs
+./demo/client.cljs.cache.edn                                  | ./demo/server.cljs.cache.edn
+./demo/client.js                                              | ./demo/server.js
+./demo/client.js.map                                          | ./demo/server.js.map
 
+# server miscellaneous
                                                               > ./21D853D.js
                                                               > ./BCE03FE.js
                                                               > ./cljs_deps.js
 
+# server uses nodejs
                                                               > ./cljs/nodejs.cljs
                                                               > ./cljs/nodejs.cljs.cache.edn
                                                               > ./cljs/nodejs.js
                                                               > ./cljs/nodejs.js.map
                                                               > ./cljs/nodejscli.cljs
 
+# client uses pushy
 ./pushy/core.cljs                                             <
 ./pushy/core.cljs.cache.edn                                   <
 ./pushy/core.js                                               <
 ./pushy/core.js.map                                           <
 
-
+# things in common
 ./cljs/core.cljs                                                ./cljs/core.cljs
 ./cljs/core.js                                                  ./cljs/core.js
 ./cljs/core.js.map                                              ./cljs/core.js.map
@@ -97,6 +101,7 @@
 ./site/tools.js                                                 ./site/tools.js
 ./site/tools.js.map                                             ./site/tools.js.map
 
+# google closure library is deployed differently
 ./goog/array/array.js                                           ./goog/array/array.js
 ./goog/asserts/asserts.js                                       ./goog/asserts/asserts.js
 ./goog/async/freelist.js                                      <
