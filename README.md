@@ -17,26 +17,21 @@ blocks.  To rebuild this project, run `script/bootstrap`.
 
 Run `script/server` to start server
 
-## License
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
-
 # Inventory
 
-### Repo overhead
+## Repo overhead
 
     README.md
     LICENSE
     .gitignore
     bin/.gitignore
 
-### Builds
+## Builds
 
     project.clj
     package.json
 
-### Blocks
+## Blocks
 
     Blockfile.json
     script/bootstrap
@@ -44,9 +39,23 @@ your option) any later version.
     script/profile
     script/server
 
-### ClojureScript
+## ClojureScript
+
+### Client
 
     src-client/demo/client.cljs
+
+### Server
+
     src-server/demo/server.cljs
+
+### Common
+
     src/demo/core.cljs
     src/site/tools.cljs
+
+# License
+
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later version.
+
