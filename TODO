@@ -1,3 +1,6 @@
 sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -sdiff <(cd resources/public/js/client; find . -type f | sort) <(cd resources/public/js/server; find . -type f | sort) | expand | vim -
 
 /memtest is fake, can't serve it directly
+
+curl https://gist.githubusercontent.com/kanaka/b588dbb6d44174672cc2/raw/repl-node.js > bin/cljs
+https://github.com/kanaka/cljs-bootstrap
