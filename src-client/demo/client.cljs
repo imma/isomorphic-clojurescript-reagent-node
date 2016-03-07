@@ -9,5 +9,8 @@
 
 (reagent/render-component [core/app-view] (.getElementById js/document "app"))
 
-(pushy/push-state! secretary/dispatch!
-  (fn [x] (when (secretary/locate-route x) x)))
+(def history
+  (pushy/push-state! secretary/dispatch!
+    (fn [x] (when (secretary/locate-route x) x))))
+
+(pushy/start! history)

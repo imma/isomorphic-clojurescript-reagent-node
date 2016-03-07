@@ -51,4 +51,3 @@
 
 ; the server side doesn't have history, so we want to make sure current-page is populated
 (reset! current-page home-page)
-
