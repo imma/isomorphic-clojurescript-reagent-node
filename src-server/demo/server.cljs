@@ -14,6 +14,7 @@
   (let [app (express)]
     (.get app "/" handle-request)
     (.use app (serve-static "resources/public/js/client"))
+    (.use app (serve-static "resources/public/css"))
     (.use app (serve-static "resources/public/static"))
     (.listen app 3000 (fn []
                         (println "Server started on port 3000")))))
