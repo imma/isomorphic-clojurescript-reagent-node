@@ -1,4 +1,4 @@
-(ns site.tools
+(ns demo.tools
   (:require [reagent.core :as reagent]
             [secretary.core :as secretary :refer-macros [defroute]]
             [demo.core :as core]))

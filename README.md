@@ -54,23 +54,23 @@ Run `script/server` to start server
     demo.client
     demo.server
     demo.core
-    site.tools
+    demo.tools
 
-### Client
+### Client: react/reagent
 
     src-client/demo/client.cljs
 
-### Server
+### Server: http service
 
     src-server/demo/server.cljs
 
-### Core
+### Core: logic, pages, views
 
     src/demo/core.cljs
 
-### Site
+### Tools: utilities
 
-    src/site/tools.cljs
+    src/demo/tools.cljs
 
 # License
 
