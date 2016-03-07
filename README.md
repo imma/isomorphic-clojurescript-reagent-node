@@ -9,7 +9,8 @@ http://blog.testdouble.com/posts/2016-01-21-isomorphic-clojurescript.html
 for more in-depth information.
 
 Incorporates code from https://github.com/scpike/memtest for the memtest
-game.
+game; from https://github.com/kanaka/cljs-bootstrap for the cljs repl
+and runner.
 
 ## Installation
 
