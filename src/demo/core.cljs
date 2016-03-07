@@ -98,6 +98,14 @@
 
 (def current-page (atom nil))
 
+(defn home-page []
+  (fn []
+    [:div 
+      [:a {:href "/"} "Game Menu:"]
+      [:span {:style {:padding "5px"}}]
+      [:a {:href "/memtest"} "Memtest"]
+      [:span {:style {:padding "5px"}}]]))
+
 (defn board-page []
   (fn []
     (let [cells (vals @gameboard)]
@@ -126,10 +134,14 @@
 (secretary/set-config! :prefix "/")
 
 (defroute "/" []
-  (.log js/console "board page")
+  (.log js/console "home-page")
+  (reset! current-page home-page))
+
+(defroute "/memtest" []
+  (.log js/console "board-page")
+  (new-game)
   (reset! current-page board-page))
 
 ; the server side doesn't have history, so we want to make sure current-page is populated
-(reset! current-page board-page)
+(reset! current-page home-page)
 
-(new-game)

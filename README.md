@@ -56,21 +56,29 @@ Run `script/server` to start server
     demo.core
     demo.tools
 
-### Client: react/reagent
+### Core
 
-    src-client/demo/client.cljs
-
-### Server: http service
-
-    src-server/demo/server.cljs
-
-### Core: logic, pages, views
+Defines the app state, pages, and views.
 
     src/demo/core.cljs
 
-### Tools: utilities
+### Client, depends on Core
+
+Renders a core view.
+
+    src-client/demo/client.cljs
+
+### Tools, depends on Core
+
+Renders a static page using a core view.
 
     src/demo/tools.cljs
+
+### Server, depends on Tools
+
+Serves a static page rendered with tools.
+
+    src-server/demo/server.cljs
 
 # License
 
