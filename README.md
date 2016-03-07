@@ -27,7 +27,6 @@ Run `script/server` to start server
     README.md
     LICENSE
     .gitignore
-    bin/.gitignore
 
 ## Builds
 
@@ -37,7 +36,12 @@ Run `script/server` to start server
 ### Ignored builds
 
     node_modules
-    resources
+    resources/public/js
+    resources/public/css
+
+### Static files
+
+    sources/public/static
 
 ## Blocks
 
@@ -58,13 +62,14 @@ Run `script/server` to start server
 
 ### Core
 
-Defines the app state, pages, and views.
+Defines the app state, pages, and views.  Used by client and server.
 
     src/demo/core.cljs
 
 ### Client, depends on Core
 
-Renders a core view.
+Renders a core view. Compiles into
+`resources/public/js/client/client.js` run by the browser.
 
     src-client/demo/client.cljs
 
@@ -76,7 +81,8 @@ Renders a static page using a core view.
 
 ### Server, depends on Tools
 
-Serves a static page rendered with tools.
+Serves a static page rendered with tools.  Compiles into
+`resources/public/js/server/server.js` run by node.
 
     src-server/demo/server.cljs
 
