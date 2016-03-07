@@ -1,69 +1,43 @@
-# client/server
 ./client.js                                                   | ./server.js
 
-# demo client/demo server
 ./demo/client.cljs                                            | ./demo/server.cljs
 ./demo/client.cljs.cache.edn                                  | ./demo/server.cljs.cache.edn
 ./demo/client.js                                              | ./demo/server.js
 ./demo/client.js.map                                          | ./demo/server.js.map
 
-# demo core
 ./demo/core.cljs                                                ./demo/core.cljs
 ./demo/core.cljs.cache.edn                                      ./demo/core.cljs.cache.edn
 ./demo/core.js                                                  ./demo/core.js
 ./demo/core.js.map                                              ./demo/core.js.map
 
-# site tools
-./site/tools.cljs                                               ./site/tools.cljs
-./site/tools.cljs.cache.edn                                     ./site/tools.cljs.cache.edn
-./site/tools.js                                                 ./site/tools.js
-./site/tools.js.map                                             ./site/tools.js.map
+./demo/tools.cljs                                               ./demo/tools.cljs
+./demo/tools.cljs.cache.edn                                     ./demo/tools.cljs.cache.edn
+./demo/tools.js                                                 ./demo/tools.js
+./demo/tools.js.map                                             ./demo/tools.js.map
 
 
-# demo.server miscellaneous
-                                                              > ./21D853D.js
-                                                              > ./BCE03FE.js
+./css/site.css                                                <
+
                                                               > ./cljs_deps.js
 
-# demo.server uses nodejs
+                                                              | ./7BD2599.js
+                                                              > ./BCE03FE.js
+
                                                               > ./cljs/nodejs.cljs
                                                               > ./cljs/nodejs.cljs.cache.edn
                                                               > ./cljs/nodejs.js
                                                               > ./cljs/nodejs.js.map
                                                               > ./cljs/nodejscli.cljs
 
-# demo.client uses pushy
 ./pushy/core.cljs                                             <
 ./pushy/core.cljs.cache.edn                                   <
 ./pushy/core.js                                               <
 ./pushy/core.js.map                                           <
 
-
-
-# clojurescript
-./cljs/core.cljs                                                ./cljs/core.cljs
-./cljs/core.js                                                  ./cljs/core.js
-./cljs/core.js.map                                              ./cljs/core.js.map
-
-./clojure/set.cljs                                              ./clojure/set.cljs
-./clojure/set.cljs.cache.edn                                    ./clojure/set.cljs.cache.edn
-./clojure/set.js                                                ./clojure/set.js
-./clojure/set.js.map                                            ./clojure/set.js.map
-./clojure/string.cljs                                           ./clojure/string.cljs
-./clojure/string.cljs.cache.edn                                 ./clojure/string.cljs.cache.edn
-./clojure/string.js                                             ./clojure/string.js
-./clojure/string.js.map                                         ./clojure/string.js.map
-./clojure/walk.cljs                                             ./clojure/walk.cljs
-./clojure/walk.cljs.cache.edn                                   ./clojure/walk.cljs.cache.edn
-./clojure/walk.js                                               ./clojure/walk.js
-./clojure/walk.js.map                                           ./clojure/walk.js.map
-
-# react
 ./react-dom-server.inc.js                                       ./react-dom-server.inc.js
 ./react-dom.inc.js                                              ./react-dom.inc.js
 ./react.inc.js                                                  ./react.inc.js
 
-# reagent
 ./reagent/core.cljs                                             ./reagent/core.cljs
 ./reagent/core.cljs.cache.edn                                   ./reagent/core.cljs.cache.edn
 ./reagent/core.js                                               ./reagent/core.js
@@ -105,29 +79,50 @@
 ./reagent/ratom.js                                              ./reagent/ratom.js
 ./reagent/ratom.js.map                                          ./reagent/ratom.js.map
 
-# secretary
 ./secretary/core.cljs                                           ./secretary/core.cljs
 ./secretary/core.cljs.cache.edn                                 ./secretary/core.cljs.cache.edn
 ./secretary/core.js                                             ./secretary/core.js
 ./secretary/core.js.map                                         ./secretary/core.js.map
 
-# google closure library is deployed differently
+./cljs/core.cljs                                                ./cljs/core.cljs
+./cljs/core.js                                                  ./cljs/core.js
+./cljs/core.js.map                                              ./cljs/core.js.map
+
+./clojure/set.cljs                                              ./clojure/set.cljs
+./clojure/set.cljs.cache.edn                                    ./clojure/set.cljs.cache.edn
+./clojure/set.js                                                ./clojure/set.js
+./clojure/set.js.map                                            ./clojure/set.js.map
+./clojure/string.cljs                                           ./clojure/string.cljs
+./clojure/string.cljs.cache.edn                                 ./clojure/string.cljs.cache.edn
+./clojure/string.js                                             ./clojure/string.js
+./clojure/string.js.map                                         ./clojure/string.js.map
+./clojure/walk.cljs                                             ./clojure/walk.cljs
+./clojure/walk.cljs.cache.edn                                   ./clojure/walk.cljs.cache.edn
+./clojure/walk.js                                               ./clojure/walk.js
+./clojure/walk.js.map                                           ./clojure/walk.js.map
+
 ./goog/array/array.js                                           ./goog/array/array.js
 ./goog/asserts/asserts.js                                       ./goog/asserts/asserts.js
+./goog/base.js                                                  ./goog/base.js
+./goog/debug/error.js                                           ./goog/debug/error.js
+./goog/deps.js                                                  ./goog/deps.js
+./goog/dom/nodetype.js                                          ./goog/dom/nodetype.js
+./goog/object/object.js                                         ./goog/object/object.js
+./goog/string/string.js                                         ./goog/string/string.js
+./goog/string/stringbuffer.js                                   ./goog/string/stringbuffer.js
+
+                                                              > ./goog/bootstrap/nodejs.js
+
+./goog/debug/entrypointregistry.js                            <
 ./goog/async/freelist.js                                      <
 ./goog/async/nexttick.js                                      <
 ./goog/async/run.js                                           <
 ./goog/async/workqueue.js                                     <
-./goog/base.js                                                  ./goog/base.js
-./goog/debug/entrypointregistry.js                            | ./goog/bootstrap/nodejs.js
-./goog/debug/error.js                                           ./goog/debug/error.js
-./goog/deps.js                                                  ./goog/deps.js
 ./goog/disposable/disposable.js                               <
 ./goog/disposable/idisposable.js                              <
 ./goog/dom/browserfeature.js                                  <
 ./goog/dom/dom.js                                             <
 ./goog/dom/inputtype.js                                       <
-./goog/dom/nodetype.js                                          ./goog/dom/nodetype.js
 ./goog/dom/safe.js                                            <
 ./goog/dom/tagname.js                                         <
 ./goog/dom/tags.js                                            <
@@ -165,14 +160,11 @@
 ./goog/math/math.js                                           <
 ./goog/math/size.js                                           <
 ./goog/memoize/memoize.js                                     <
-./goog/object/object.js                                         ./goog/object/object.js
 ./goog/promise/promise.js                                     <
 ./goog/promise/resolver.js                                    <
 ./goog/promise/thenable.js                                    <
 ./goog/reflect/reflect.js                                     <
 ./goog/string/const.js                                        <
-./goog/string/string.js                                         ./goog/string/string.js
-./goog/string/stringbuffer.js                                   ./goog/string/stringbuffer.js
 ./goog/string/typedstring.js                                  <
 ./goog/structs/map.js                                         <
 ./goog/structs/structs.js                                     <
