@@ -1,7 +1,6 @@
 {
   "require": [
     "node",
-    "leiningen",
-    "cljs"
+    "leiningen"
   ]
 }
