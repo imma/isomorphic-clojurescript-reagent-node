@@ -10,7 +10,7 @@
                  [secretary "1.2.3"]
                  [kibu/pushy "0.3.6"]]
 
-  :plugins [[lein-cljsbuild "1.1.2"]]
+  :plugins [[lein-cljsbuild "1.1.3"]]
 
   :source-paths ["src"]
 
