@@ -16,7 +16,7 @@
     (.use app (serve-static "resources/public/js/client"))
     (.use app (serve-static "resources/public/css"))
     (.use app (serve-static "resources/public/static"))
-    (.listen app 3000 (fn []
-                        (println "Server started on port 3000")))))
+    (.listen app 3002 (fn []
+                        (println "Server started on port 3002")))))
 
 (set! *main-cli-fn* -main)

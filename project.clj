@@ -4,8 +4,8 @@
 
   :min-lein-version "2.6.1"
 
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "1.7.228"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.8.40"]
                  [reagent "0.6.0-alpha"]
                  [secretary "1.2.3"]
                  [kibu/pushy "0.3.6"]]
