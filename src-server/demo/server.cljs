@@ -1,4 +1,4 @@
-(ns demo.server
+(ns ^:figwheel-always demo.server
   (:require [cljs.nodejs :as nodejs]
             [demo.tools :as tools]))
 

@@ -1,3 +1,5 @@
 /node_modules
 /resources/public/js
 /resources/public/css
+/figwheel_server.log
+/target
