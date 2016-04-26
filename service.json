@@ -1,0 +1,16 @@
+{
+  "services": {
+    "game-figwheel": {
+      "run": "cd ~/work/isomorphic-clojurescript-reagent-node && lein figwheel client server",
+      "env": {
+        "meh": "meh"
+      }
+    },
+    "game-server": {
+      "run": "cd ~/work/isomorphic-clojurescript-reagent-node && script/sever",
+      "env": {
+        "meh": "meh"
+      }
+    }
+  }
+}
