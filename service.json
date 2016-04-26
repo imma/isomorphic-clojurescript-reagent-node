@@ -1,13 +1,13 @@
 {
   "services": {
     "game-figwheel": {
-      "run": "cd ~/work/isomorphic-clojurescript-reagent-node && lein figwheel client server",
+      "run": "chexec $BLOCK_PATH/isomorphic-clojurescript-reagent-node lein figwheel client server",
       "env": {
         "meh": "meh"
       }
     },
     "game-server": {
-      "run": "cd ~/work/isomorphic-clojurescript-reagent-node && script/sever",
+      "run": "chexec $BLOCK_PATH/isomorphic-clojurescript-reagent-node script/server",
       "env": {
         "meh": "meh"
       }
