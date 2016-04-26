@@ -4,7 +4,7 @@ function bootstrap {
   local shome="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"
   source "$shome/script/profile"
 
-  node resources/public/js/server/server.js
+  exec node resources/public/js/server/server.js
 }
 
-bootstrap
+bootstrap "$@"
