@@ -11,27 +11,33 @@
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-figwheel "0.5.1"]]
 
-  :clean-targets ^{:protect false} ["resources"]
+  :clean-targets ^{:protect false} ["resources/public/js"]
 
   :cljsbuild {
     :builds [{:id "server"
               :source-paths ["src" "src-server"]
               :figwheel true
               :compiler {
+                :asset-path "js/server"
                 :output-to "resources/public/js/server/server.js"
                 :output-dir "resources/public/js/server"
                 :optimizations :none
                 :source-map true
                 :main demo.server
-                :target :nodejs}}
+                :target :nodejs }}
              {:id "client"
               :source-paths ["src" "src-client"]
               :figwheel true
               :compiler {
+                :asset-path "js/client"
                 :output-to "resources/public/js/client/client.js"
                 :output-dir "resources/public/js/client"
                 :optimizations :none
-                :source-map true}}]}
+                :source-map true }}]}
   
   :figwheel { 
-    :css-dirs ["resources/public/static/css"] })
+    :css-dirs ["resources/public/static/css"
+               "resources/public/static"
+               "static/css"
+               "css"] })
+
