@@ -36,8 +36,5 @@
                 :source-map true }}]}
   
   :figwheel { 
-    :css-dirs ["resources/public/static/css"
-               "resources/public/static"
-               "static/css"
-               "css"] })
+    :css-dirs ["resources/public/static/css" ] })
 
