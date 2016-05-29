@@ -3,13 +3,13 @@
   :url "http://defn.sh/isomorphic-clojurescript-reagent-node"
 
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.8.40"]
-                 [reagent "0.6.0-alpha"]
+                 [org.clojure/clojurescript "1.8.51"]
+                 [reagent "0.6.0-alpha2"]
                  [secretary "1.2.3"]
                  [kibu/pushy "0.3.6"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-figwheel "0.5.1"]]
+            [lein-figwheel "0.5.3-2"]]
 
   :clean-targets ^{:protect false} ["resources/public/js"]
 
