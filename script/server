@@ -4,13 +4,20 @@ function bootstrap {
   local shome="${_isomorphic_clojurescript_reagent_node_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   source "$shome/script/profile"
 
+  if [[ "$#" == 0 ]]; then
+    set -- default
+  fi
+
   case "${1:-}" in
-    figwheel)
+  figwheel)
       exec lein figwheel client server
       ;;
-
-    *)
+    default)
       exec node resources/public/js/server/server.js
+      ;;
+    *)
+      echo "ERROR: unknown server command: ${1:-/not-supplied/}" 1>&2
+      return 1
       ;;
   esac
 }
