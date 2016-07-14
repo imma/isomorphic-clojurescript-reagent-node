@@ -3,7 +3,7 @@
   :url "http://defn.sh/isomorphic-clojurescript-reagent-node"
 
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.8.51"]
+                 [org.clojure/clojurescript "1.9.89"]
                  [reagent "0.6.0-rc"]
                  [secretary "1.2.3"]
                  [kibu/pushy "0.3.6"]]
