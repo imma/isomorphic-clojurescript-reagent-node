@@ -5,8 +5,7 @@
     "serve-static": "^1.10.0"
   },
   "devDependencies": {
-    "react": "^0.14.8",
-    "react-dom": "^0.14.8",
+    "react": "^15.1.0",
     "source-map-support": "0.4.0",
     "ws": "0.8.1"
   }
