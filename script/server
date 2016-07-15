@@ -8,6 +8,7 @@ function main {
     set -- default
   fi
 
+  cd "$shome"
   case "${1:-}" in
   figwheel)
       exec lein figwheel client server
