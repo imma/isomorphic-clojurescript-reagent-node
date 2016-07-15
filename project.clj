@@ -9,7 +9,7 @@
                  [kibu/pushy "0.3.6"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-figwheel "0.5.3-2"]]
+            [lein-figwheel "0.5.4-7"]]
 
   :clean-targets ^{:protect false} ["resources/public/js"]
 
