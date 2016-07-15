@@ -1,8 +1,7 @@
 (ns demo.core
   (:require [reagent.core :as reagent :refer [atom]]
             [secretary.core :as secretary :refer-macros [defroute]]
-            [memtest.core :as memtest]
-            [tictactoe.core :as tictactoe]))
+            [memtest.core :as memtest]))
 
 (def current-page (atom nil))
 
@@ -23,9 +22,6 @@
        [:a {:href "/memtest"} "Memtest"]
        [:span {:style {:padding "5px"}}]
 
-       [:a {:href "/tictactoe"} "Tic Tac Toe"]
-       [:span {:style {:padding "5px"}}]
-
        [game]]])))
 
 (defn app-view []
@@ -43,11 +39,6 @@
   (.log js/console "memtest/memtest-page")
   (memtest/new-game)
   (reset! current-page (home-page memtest/memtest-page)))
-
-(defroute "/tictactoe" []
-  (.log js/console "tictactoe/tictactoe-page")
-  (tictactoe/new-game)
-  (reset! current-page (home-page tictactoe/tictactoe-page)))
 
 ; the server side doesn't have history, so we want to make sure current-page is populated
 (reset! current-page home-page)
