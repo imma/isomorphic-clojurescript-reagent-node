@@ -8,8 +8,6 @@ function main {
     set -- default
   fi
 
-  source "$shome/vendor/nodeenv/bin/activate"
-
   cd "$shome"
   case "${1:-}" in
   figwheel)
