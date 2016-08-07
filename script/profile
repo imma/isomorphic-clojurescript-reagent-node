@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-function profile {
+function _isomorphic_clojurescript_reagent_node_profile {
   local shome="${_isomorphic_clojurescript_reagent_node_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
 }
 
-profile
+_isomorphic_clojurescript_reagent_node_profile
