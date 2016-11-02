@@ -10,7 +10,7 @@ function main {
 
   cd "$shome"
   case "${1:-}" in
-  figwheel)
+    figwheel)
       exec lein figwheel client server
       ;;
     default)
