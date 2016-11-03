@@ -19,8 +19,7 @@
 
   (. app (get "/" render-game))
   (. app (get "/memtest/" render-game))
-  (. app (use (serve-static "resources/public/js/client")))
-  (. app (use (serve-static "resources/public/static"))))
+  (. app (use (serve-static "resources/public"))))
 
 ; main
 (defn -main []

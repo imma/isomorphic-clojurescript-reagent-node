@@ -5,3 +5,4 @@
 /target
 /sv
 /vendor
+.lein-repl-history

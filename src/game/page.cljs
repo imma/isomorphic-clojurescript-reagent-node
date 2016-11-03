@@ -10,11 +10,11 @@
    [:head
     [:meta {:charset "utf-8"}]
     [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
-    [:link {:href "css/site.css" :rel "stylesheet" :type "text/css"}]]
+    [:link {:href "static/css/site.css" :rel "stylesheet" :type "text/css"}]]
    [:body
     [:div#app [body]]
-    [:script {:type "text/javascript" :src "goog/base.js"}]
-    [:script {:type "text/javascript" :src "client.js"}]
+    [:script {:type "text/javascript" :src "js/client/goog/base.js"}]
+    [:script {:type "text/javascript" :src "js/client/client.js"}]
     [:script {:type "text/javascript"
               :dangerouslySetInnerHTML {:__html "goog.require('game.client');"}}]]])
 
