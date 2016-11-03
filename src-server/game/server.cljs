@@ -10,8 +10,8 @@
 
 (def app (express))
 
-(. app (get "/" 
-            (fn [req res] (.send res (tools/render-page (.-path req))))))
+(. app (get "/" (fn [req res] (.send res (tools/render-page (.-path req))))))
+(. app (get "/memtest/" (fn [req res] (.send res (tools/render-page (.-path req))))))
 (. app (use (serve-static "resources/public/js/client")))
 (. app (use (serve-static "resources/public/static")))
 
