@@ -27,7 +27,10 @@
 (defn add-cell [n]
   ; add a numbered cell with a unique id
   (let [id (swap! counter inc)]
-    (swap! gameboard assoc id {:id id :number n :color (colors n)})))
+    (swap! gameboard 
+           assoc id {:id id 
+                     :number n 
+                     :color (colors n)})))
 
 (defn new-game 
   []
@@ -41,8 +44,8 @@
   (reset! highlighted #{})
   ; take two sets of numbers (1..8) and randomize their order, then add them as
   ; cells
-  (doseq [x (shuffle (into (range 1 9) (range 1 9)))]
-    (add-cell x)))
+  (doseq [cell (shuffle (into (range 1 9) (range 1 9)))]
+    (add-cell cell)))
 
 (defn select-cell
   [cell]                   ; ensures one cell is colored via selection
@@ -52,7 +55,7 @@
 (defn lose-cell
   [cell]                                 ; ensures two cells are colored via highlighting
   (reset! highlighted #{cell @selected}) ; highlight selected and current cell
-  (reset! selected nil))                 ; dont select anything
+  (reset! selected cell))                ; mark cell as selected
 
 (defn win-cell
   [{:keys [number]}]                     ; ensures two more cells are colored via match
@@ -70,7 +73,7 @@
   (cond
    (= @selected cell) (reset! selected nil) ; reset if selected cell is selected again
    (nil? @selected) (select-cell cell)      ; set as selected if nothing was selected
-   (winning-click? cell) (win-cell cell)    ; mark as won if click is a dinner
+   (winning-click? cell) (win-cell cell)    ; mark as won if click is a winner
    :else (lose-cell cell)))                 ; else mark as lost
 
 (defn highlighted?
@@ -87,10 +90,10 @@
           :on-click #(handle-click cell)}]))
 
 (defn board-row []
-  (fn [x]
+  (fn [row]
     [:tr
      ; loop through each cell in a row
-     (for [{:keys [id] :as cell} x]
+     (for [{:keys [id] :as cell} row]
        ^{:key id} [board-cell cell])]))
 
 (defn memtest-page []
@@ -105,10 +108,11 @@
        [:table#gameboard [:tbody
         ; taking 4 cells at a time for each row
         (map-indexed
-          (fn [idx x] ^{:key idx} [board-row x])
+          (fn [idx row] ^{:key idx} [board-row row])
           (partition 4 cells))]]
        ; text link to reset the game
-       [:p [:a {:class "new-game" :on-click #(new-game)
+       [:p [:a {:class "new-game" 
+                :on-click #(new-game)
                 :href "#"} "New Game"]]
        
        ])))
