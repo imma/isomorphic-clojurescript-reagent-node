@@ -1,13 +1,13 @@
-(ns demo.client
+(ns game.client
   (:require [reagent.core :as reagent]
             [secretary.core :as secretary]
             [pushy.core :as pushy]
-            [demo.core :as core])
+            [game.core :as game])
   (:import goog.History))
 
 (enable-console-print!)
 
-(reagent/render-component [core/app-view] (.getElementById js/document "app"))
+(reagent/render-component [game/app-view] (.getElementById js/document "app"))
 
 (def history
   (pushy/push-state! secretary/dispatch!

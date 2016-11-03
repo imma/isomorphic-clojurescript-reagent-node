@@ -1,6 +1,6 @@
-(ns ^:figwheel-always demo.server
+(ns ^:figwheel-always game.server
   (:require [cljs.nodejs :as nodejs]
-            [demo.tools :as tools]))
+            [game.tools :as tools]))
 
 (nodejs/enable-util-print!)
 

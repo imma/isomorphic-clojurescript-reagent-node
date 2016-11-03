@@ -1,4 +1,4 @@
-(ns demo.core
+(ns game.core
   (:require [reagent.core :as reagent :refer [atom]]
             [secretary.core :as secretary :refer-macros [defroute]]
             [memtest.core :as memtest]))

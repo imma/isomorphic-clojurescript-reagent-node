@@ -1,4 +1,4 @@
-(defproject demo "0.1.0-SNAPSHOT"
+(defproject game "0.1.0-SNAPSHOT"
   :description "Demo to show how to build an isomorphic app with CLJS"
   :url "http://defn.sh/isomorphic-clojurescript-reagent-node"
 
@@ -23,7 +23,7 @@
                 :output-dir "resources/public/js/server"
                 :optimizations :none
                 :source-map true
-                :main demo.server
+                :main game.server
                 :target :nodejs }}
              {:id "client"
               :source-paths ["src" "src-client"]

@@ -1,7 +1,7 @@
-(ns demo.tools
+(ns game.tools
   (:require [reagent.core :as reagent]
             [secretary.core :as secretary :refer-macros [defroute]]
-            [demo.core :as core]))
+            [game.core :as game]))
 
 (enable-console-print!)
 
@@ -17,9 +17,9 @@
     [:script {:type "text/javascript" :src "goog/base.js"}]
     [:script {:type "text/javascript" :src "client.js"}]
     [:script {:type "text/javascript"
-              :dangerouslySetInnerHTML {:__html "goog.require('demo.client');"}}]]])
+              :dangerouslySetInnerHTML {:__html "goog.require('game.client');"}}]]])
 
 (defn ^:export render-page [path]
   (reagent/render-to-static-markup (do
                                      (secretary/dispatch! path)
-                                     [template {:body core/app-view}])))
+                                     [template {:body game/app-view}])))
