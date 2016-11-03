@@ -5,8 +5,7 @@ function bootstrap {
   source "$shome/script/profile"
 
   block compile npm
-
-  lein cljsbuild once server client
+  #lein cljsbuild once server client
 }
 
 bootstrap
