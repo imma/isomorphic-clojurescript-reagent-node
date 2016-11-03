@@ -10,8 +10,11 @@
 
 (def app (express))
 
-(. app (get "/" (fn [req res] (.send res (tools/render-page (.-path req))))))
-(. app (get "/memtest/" (fn [req res] (.send res (tools/render-page (.-path req))))))
+(defn render-game[req res]
+  (.send res (tools/render-page (.-path req))))
+
+(. app (get "/" render-game))
+(. app (get "/memtest/" render-game))
 (. app (use (serve-static "resources/public/js/client")))
 (. app (use (serve-static "resources/public/static")))
 
