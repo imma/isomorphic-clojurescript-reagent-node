@@ -17,9 +17,6 @@
    (fn []
      [:div
       [:div 
-       [:a {:href "/"} "Game Menu:"]
-       [:span {:style {:padding "5px"}}]
-
        [:a {:href "/memtest"} "Memtest"]
        [:span {:style {:padding "5px"}}]
 
