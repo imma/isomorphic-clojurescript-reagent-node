@@ -8,8 +8,8 @@ html {
 a, h1, h2, p { color: #3F403D; }
 
 td.game-cell {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   padding: 3px;
   background-color: #F5FFE0;
   border: 1px solid #262626;
