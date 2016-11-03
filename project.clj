@@ -18,7 +18,7 @@
               :source-paths ["src" "src-server"]
               :figwheel true
               :compiler {
-                :asset-path "js/server"
+                :asset-path "resources/public/js/server"
                 :output-to "resources/public/js/server/server.js"
                 :output-dir "resources/public/js/server"
                 :optimizations :none
@@ -29,7 +29,7 @@
               :source-paths ["src" "src-client"]
               :figwheel true
               :compiler {
-                :asset-path "js/client"
+                :asset-path "resources/public/js/client"
                 :output-to "resources/public/js/client/client.js"
                 :output-dir "resources/public/js/client"
                 :optimizations :none
