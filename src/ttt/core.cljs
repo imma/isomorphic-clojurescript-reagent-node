@@ -46,10 +46,10 @@
     (let [cells (vals @gameboard)]
       [:div#container
        [:h1 "Tic Tac Toe"]
+       [:p [:a {:class "new-game" 
+                :on-click #(new-game)
+                :href "#"} "New Game"]]
        [:table#gameboard [:tbody
         (map-indexed
           (fn [idx row] ^{:key idx} [board-row row])
-          (partition 3 cells))]]
-       [:p [:a {:class "new-game" 
-                :on-click #(new-game)
-                :href "#"} "New Game"]]])))
+          (partition 3 cells))]]])))

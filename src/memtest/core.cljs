@@ -102,6 +102,10 @@
       [:div#container
        ; game title
        [:h1 "The Memory Game"]
+       ; text link to reset the game
+       [:p [:a {:class "new-game" 
+                :on-click #(new-game)
+                :href "#"} "New Game"]]
        ; win status
        [:h2 (if (won-game?) "You won!!!")]
        ; the gameboard 
@@ -109,10 +113,4 @@
         ; taking 4 cells at a time for each row
         (map-indexed
           (fn [idx row] ^{:key idx} [board-row row])
-          (partition 4 cells))]]
-       ; text link to reset the game
-       [:p [:a {:class "new-game" 
-                :on-click #(new-game)
-                :href "#"} "New Game"]]
-       
-       ])))
+          (partition 4 cells))]]])))
