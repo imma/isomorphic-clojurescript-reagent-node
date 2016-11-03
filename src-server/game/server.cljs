@@ -1,6 +1,6 @@
 (ns ^:figwheel-always game.server
   (:require [cljs.nodejs :as nodejs]
-            [game.tools :as tools]))
+            [game.page :as page]))
 
 (nodejs/enable-util-print!)
 
@@ -11,7 +11,7 @@
 (def app (express))
 
 (defn render-game[req res]
-  (.send res (tools/render-page (.-path req))))
+  (.send res (page/render-page (.-path req))))
 
 (. app (get "/" render-game))
 (. app (get "/memtest/" render-game))

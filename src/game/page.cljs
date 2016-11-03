@@ -1,4 +1,4 @@
-(ns game.tools
+(ns game.page
   (:require [reagent.core :as reagent]
             [secretary.core :as secretary :refer-macros [defroute]]
             [game.core :as game]))
@@ -9,8 +9,7 @@
   [:html
    [:head
     [:meta {:charset "utf-8"}]
-    [:meta {:name    "viewport"
-            :content "width=device-width, initial-scale=1.0"}]
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1.0"}]
     [:link {:href "css/site.css" :rel "stylesheet" :type "text/css"}]]
    [:body
     [:div#app [body]]
@@ -20,6 +19,7 @@
               :dangerouslySetInnerHTML {:__html "goog.require('game.client');"}}]]])
 
 (defn ^:export render-page [path]
-  (reagent/render-to-static-markup (do
-                                     (secretary/dispatch! path)
-                                     [template {:body game/app-view}])))
+  (reagent/render-to-static-markup 
+    (do
+      (secretary/dispatch! path)
+      [template {:body game/app-view}])))
