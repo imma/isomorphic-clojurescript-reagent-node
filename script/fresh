@@ -4,11 +4,15 @@ function fresh {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  if [[ -f resources/public/js/server/server.js ]]; then
-    return 0
+  if [[ ! -f "$shome/resources/public/js/server/server.js" ]]; then
+    return 1
   fi
 
-  return 1
+  if ! type -P rlwrap >/dev/null; then
+    return 1
+  fi
+
+  return 0
 }
 
 fresh

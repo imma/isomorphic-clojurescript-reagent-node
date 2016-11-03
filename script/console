@@ -11,7 +11,7 @@ function main {
   cd "$shome"
   case "${1:-}" in
     default)
-      exec lein figwheel client server
+      exec rlwrap lein figwheel client server
       ;;
     *)
       echo "ERROR: unknown console command: ${1:-/not-supplied/}" 1>&2
