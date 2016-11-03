@@ -7,25 +7,24 @@
 
 (debug)
 
+(defonce express (nodejs/require "express"))
+(defonce serve-static (nodejs/require "serve-static"))
+
+(def app (express))
+
+(defn render-game[req res]
+  (.send res (page/render-page (.-path req))))
+
 (defn setup[]
-  (defonce express (nodejs/require "express"))
-  (defonce serve-static (nodejs/require "serve-static"))
-  (defonce http (nodejs/require "http"))
-
-  (def app (express))
-
-  (defn render-game[req res]
-    (.send res (page/render-page (.-path req))))
-
-  (. app (get "/" render-game))
-  (. app (get "/memtest/" render-game))
-  (. app (get "/ttt" render-game))
-  (. app (use (serve-static "resources/public"))))
+  (doto app
+    (.get "/" render-game)
+    (.get "/memtest/" render-game)
+    (.get "/ttt" render-game)
+    (.use (serve-static "resources/public"))))
 
 ; main
 (defn -main []
-  (doto 
-    (.createServer http #(app %1 %2))
+  (doto app
     (.listen 3002 (fn [] 
                     (println "Server started on port 3002")))))
 
