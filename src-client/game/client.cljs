@@ -8,6 +8,8 @@
 (defn debug[]
   (enable-console-print!))
 
+(debug)
+
 (defn setup[]
   (reagent/render-component [game/app-view] (.getElementById js/document "app")))
 
@@ -19,6 +21,5 @@
 (defn -main[]
   (pushy/start! history))
 
-(debug)
 (setup)
 (-main)

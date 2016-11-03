@@ -5,6 +5,8 @@
 (defn debug[]
   (nodejs/enable-util-print!))
 
+(debug)
+
 (defn setup[]
   (defonce express (nodejs/require "express"))
   (defonce serve-static (nodejs/require "serve-static"))
@@ -27,6 +29,5 @@
     (.listen 3002 (fn [] 
                     (println "Server started on port 3002")))))
 
-(debug)
 (setup)
 (set! *main-cli-fn* -main)
