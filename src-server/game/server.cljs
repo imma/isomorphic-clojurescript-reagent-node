@@ -19,6 +19,7 @@
 
   (. app (get "/" render-game))
   (. app (get "/memtest/" render-game))
+  (. app (get "/ttt" render-game))
   (. app (use (serve-static "resources/public"))))
 
 ; main
