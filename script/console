@@ -11,6 +11,8 @@ function main {
   cd "$shome"
   case "${1:-}" in
     default)
+      lein clean
+      npm run build
       exec rlwrap lein figwheel client server
       ;;
     *)

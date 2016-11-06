@@ -13,6 +13,7 @@
     [:link {:href "static/css/site.css" :rel "stylesheet" :type "text/css"}]]
    [:body
     [:div#app [body]]
+    [:script {:type "text/javascript" :src "js/bundle.js"}]
     [:script {:type "text/javascript" :src "js/client/goog/base.js"}]
     [:script {:type "text/javascript" :src "js/client/client.js"}]
     [:script {:type "text/javascript"
