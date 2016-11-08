@@ -6,3 +6,4 @@
 /sv
 /vendor
 .lein-repl-history
+npm-debug.log

@@ -12,6 +12,6 @@
     "ws": "1.1.1"
   },
   "scripts": {
-    "build": "./node_modules/.bin/webpack"
+    "build": "webpack"
   }
 }
