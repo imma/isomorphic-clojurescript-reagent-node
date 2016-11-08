@@ -5,7 +5,8 @@
   :dependencies [[org.clojure/clojurescript "1.9.293"]
                  [reagent "0.6.0"]
                  [secretary "1.2.3"]
-                 [kibu/pushy "0.3.6"]]
+                 [kibu/pushy "0.3.6"]
+                 [devcards "0.2.2"]]
 
   :plugins [[lein-cljsbuild "1.1.4"]
             [lein-figwheel "0.5.8"]]
@@ -29,6 +30,7 @@
               :source-paths ["src" "src-client"]
               :figwheel true
               :compiler {
+                :devcards true
                 :asset-path "resources/public/client/js"
                 :output-to "resources/public/client/js/client.js"
                 :output-dir "resources/public/client/js"
