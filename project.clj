@@ -2,8 +2,7 @@
   :description "Demo to show how to build an isomorphic app with CLJS"
   :url "http://defn.sh/isomorphic-clojurescript-reagent-node"
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.293"]
+  :dependencies [[org.clojure/clojurescript "1.9.293"]
                  [reagent "0.6.0"]
                  [secretary "1.2.3"]
                  [kibu/pushy "0.3.6"]]
