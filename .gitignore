@@ -1,6 +1,6 @@
 /node_modules
-/resources/public/js
-/resources/public/css
+/resources/public/client
+/resources/public/server
 /figwheel_server.log
 /target
 /sv

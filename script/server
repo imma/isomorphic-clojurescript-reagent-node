@@ -11,7 +11,7 @@ function main {
   cd "$shome"
   case "${1:-}" in
     default)
-      exec node "$shome/resources/public/js/server/server.js"
+      exec node "$shome/resources/public/server/js/server.js"
       ;;
     *)
       echo "ERROR: unknown server command: ${1:-/not-supplied/}" 1>&2

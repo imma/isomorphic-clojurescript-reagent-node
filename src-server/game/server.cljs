@@ -17,10 +17,9 @@
 
 (defn setup[]
   (doto app
-    (.get "/" render-game)
-    (.get "/memtest/" render-game)
-    (.get "/ttt" render-game)
-    (.use (serve-static "resources/public"))))
+    (.use (serve-static "resources/public/static"))
+    (.use (serve-static "resources/public/js/client"))
+    (.use render-game)))
 
 ; main
 (defn -main []

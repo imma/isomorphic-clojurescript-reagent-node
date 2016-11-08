@@ -4,7 +4,7 @@ function fresh {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  if [[ ! -f "$shome/resources/public/js/server/server.js" ]]; then
+  if [[ ! -f "$shome/resources/public/server/js/server.js" ]]; then
     return 1
   fi
 

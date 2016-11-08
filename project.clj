@@ -10,16 +10,17 @@
   :plugins [[lein-cljsbuild "1.1.4"]
             [lein-figwheel "0.5.8"]]
 
-  :clean-targets ^{:protect false} ["resources/public/js"]
+  :clean-targets ^{:protect false} ["resources/public/server",
+                                    "resources/public/client"]
 
   :cljsbuild {
     :builds [{:id "server"
               :source-paths ["src" "src-server"]
               :figwheel true
               :compiler {
-                :asset-path "resources/public/js/server"
-                :output-to "resources/public/js/server/server.js"
-                :output-dir "resources/public/js/server"
+                :asset-path "resources/public/server/js"
+                :output-to "resources/public/server/js/server.js"
+                :output-dir "resources/public/server/js"
                 :optimizations :none
                 :source-map true
                 :main game.server
@@ -28,9 +29,9 @@
               :source-paths ["src" "src-client"]
               :figwheel true
               :compiler {
-                :asset-path "resources/public/js/client"
-                :output-to "resources/public/js/client/client.js"
-                :output-dir "resources/public/js/client"
+                :asset-path "resources/public/client/js"
+                :output-to "resources/public/client/js/client.js"
+                :output-dir "resources/public/client/js"
                 :optimizations :none
                 :source-map true }}]}
   
