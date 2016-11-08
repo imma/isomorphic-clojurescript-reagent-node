@@ -5,6 +5,21 @@
 
 (enable-console-print!)
 
+;<html>
+;  <head>
+;    <meta charset="utf-8"/>
+;    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+;    <link href="/css/site.css" rel="stylesheet" type="text/css"/>
+;  </head>
+;  <body>
+;    <div id="app"/>
+;    <script type="text/javascript" src="/js/bundle.js"></script>
+;    <script type="text/javascript" src="/js/goog/base.js"></script>
+;    <script type="text/javascript" src="/js/client.js"></script>
+;    <script type="text/javascript">goog.require('game.client');</script>
+;  </body>
+;</html>
+
 (defn template [{:keys [body]}]
   [:html
    [:head
@@ -24,3 +39,4 @@
     (do
       (secretary/dispatch! path)
       [template {:body game/app-view}])))
+

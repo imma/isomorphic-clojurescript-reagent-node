@@ -10,7 +10,7 @@
   :plugins [[lein-cljsbuild "1.1.4"]
             [lein-figwheel "0.5.8"]]
 
-  :clean-targets ^{:protect false} ["resources/public/server",
+  :clean-targets ^{:protect false} ["resources/public/server"
                                     "resources/public/client"]
 
   :cljsbuild {
